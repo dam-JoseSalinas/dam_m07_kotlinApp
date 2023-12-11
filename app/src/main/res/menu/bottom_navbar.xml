@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_button"
+        android:title="@string/home"
+        android:icon="@drawable/icon_home"/>
+    <item
+        android:id="@+id/selected_button"
+        android:title="@string/selected"
+        android:icon="@drawable/icon_products"/>
+    <item
+        android:id="@+id/personal_button"
+        android:title="@string/personal"
+        android:icon="@drawable/icon_personal"/>
+</menu>

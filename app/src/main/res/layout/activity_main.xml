@@ -4,15 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/color_gradient_purple_1">
+    <!--MENU LATERAL-->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lateral_menu_drawer"
+        tools:openDrawer="left"
+        android:fitsSystemWindows="true"
+        android:elevation="1dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/icon_menu_lateral" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/lateral_menu_fragment_container"/>
+        </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lateral_nav_view"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/drawer_menu_enterprise_bar"
+            app:menu="@menu/navigation_drawer_menu"
+            app:itemTextAppearance="@style/Lateral_menu_letter"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <!--TITULO-->
+        <TextView
+            android:id="@+id/shop_title"
+            style="@style/title"
+            android:text="@string/shop_title"/>
+
+    <!--CUERPO-->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shop_title"
+        android:layout_marginTop="16dp"/>
+
+    <!--BARRA MENU INFERIOR-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/color_gradient_blue_1"
+        app:menu="@menu/bottom_navbar"
+        app:labelVisibilityMode="selected"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
