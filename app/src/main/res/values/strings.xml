@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Tekbay</string>
+    <!--Titulos menu lateral-->
+    <string name="menu_shop_title">SHOP ZONE</string>
+    <string name="menu_chat_title">CHAT ZONE</string>
+    <string name="menu_wiki_title">WIKI ZONE</string>
+
+    <!--Titulos principales-->
+    <string name="shop_title">SHOP</string>
+    <string name="config">CONFIGURAR</string>
+    <string name="login">LOGIN</string>
+    <string name="logout">LOGOUT</string>
+
+    <!--Buscador-->
+    <string name="search_hint">Buscar</string>
+
+    <!--Textos de productos-->
+    <string name="product_short_description">
+        Esta es una breve descripción de este articulo
+        que define las principales caracteristicas del contenido
+    </string>
+    <string name="product_long_descripction">
+        Esta es una extendida descripción de un articulo concreto
+        donde se definen todas las caracteristicas ya sea para el
+        entendimiento o la compra según si se encuentra en la sección
+        de compras o de wikimedia.
+    </string>
+
+    <!--Textos de comentarios-->
+    <string name="comment_short_description">
+        Esta es una breve descripción de este post
+        que define el asunto del comentario
+    </string>
+    <string name="comment_long_descripction">
+        Esta es un extendido ejemplar de un comentario concreto
+        donde se muestra la opinion de un usuario de la aplicacion
+        respecto a uno de los articulos disponible en todo el catalago
+        de los productos que tiene la aplicación en su base de datos
+    </string>
+    <string name="subtitle_compra">CARRITO DE LA COMPRA</string>
+    <string name="subtitle_buscar">RECOMENDACIONES</string>
+    <string name="subtitle_config_compra">CONFIGURACION DE LA COMPRA</string>
+    <!--Texto de navbar inferior-->
+    <string name="home">home</string>
+    <string name="selected">selected</string>
+    <string name="personal">personal</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_nav">Abrir menu</string>
+    <string name="close_nav">Cerrar menu</string>
+</resources>
