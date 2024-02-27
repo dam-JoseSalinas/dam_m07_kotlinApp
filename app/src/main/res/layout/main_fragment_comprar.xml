@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!--Linear layout orientation vertical-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ComprarFragment">
+
+    <!--Linear layout orientation vertical-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/shop_search_bar"
+            style="@style/search_bar"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/shop_subtitle"
+            style="@style/short_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="@string/subtitle_compra"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_search_bar"
+            android:textColor="@android:color/white"/>
+
+        <!--RecyclerView-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_subtitle"
+            tools:listitem="@layout/fragment_comprar_recycler_template" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+<!--
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerview"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="1dp"
+    android:visibility="visible"
+    app:layout_constraintBottom_toTopOf="@+id/button_second"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:listitem="@layout/fragment_comprar_recycler_template"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" />
+-->
+<!--
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ComprarFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-BUSCADOR->
+<EditText
+android:id="@+id/shop_search_bar"
+style="@style/search_bar"
+app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-SUBTITULO->
+<TextView
+android:id="@+id/shop_subtitle"
+style="@style/short_desc"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:layout_marginStart="24dp"
+android:layout_marginTop="16dp"
+android:layout_marginEnd="24dp"
+android:gravity="center"
+android:text="@string/subtitle_compra"
+android:textSize="24sp"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintTop_toBottomOf="@id/shop_search_bar" />
+
+<-ImageView-->
+<!--android:id="@+id/imageView"
+android:layout_width="140dp"
+android:layout_height="120dp"
+
+android:layout_marginTop="16dp"
+android:layout_marginEnd="8dp"
+android:background="@drawable/productos_pc"
+app:layout_constraintEnd_toStartOf="@+id/textview"
+app:layout_constraintHorizontal_bias="0.5"
+app:layout_constraintHorizontal_chainStyle="spread_inside"
+app:layout_constraintStart_toStartOf="@+id/shop_subtitle"
+app:layout_constraintTop_toBottomOf="@+id/shop_subtitle" />
+
+<TextView
+android:id="@+id/textview"
+android:layout_width="210dp"
+android:layout_height="120dp"
+android:text="@string/product_long_descripction"
+style="@style/long_desc"
+app:layout_constraintEnd_toEndOf="@+id/shop_subtitle"
+app:layout_constraintHorizontal_bias="0.5"
+app:layout_constraintStart_toEndOf="@+id/imageView"
+app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+<ImageView
+android:id="@+id/imageView2"
+android:layout_width="140dp"
+android:layout_height="120dp"
+android:layout_marginTop="16dp"
+
+android:background="@drawable/producto_placa"
+app:layout_constraintEnd_toEndOf="@+id/imageView"
+app:layout_constraintStart_toStartOf="@+id/imageView"
+app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+<TextView
+android:id="@+id/textview2"
+style="@style/long_desc"
+android:layout_width="210dp"
+android:layout_height="120dp"
+android:text="@string/product_long_descripction"
+app:layout_constraintEnd_toEndOf="@+id/textview"
+app:layout_constraintStart_toStartOf="@+id/textview"
+app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+<ImageView
+android:id="@+id/imageView3"
+android:layout_width="140dp"
+android:layout_height="120dp"
+android:layout_marginTop="16dp"
+android:background="@drawable/producto_grafica"
+app:layout_constraintEnd_toEndOf="@+id/imageView2"
+app:layout_constraintStart_toStartOf="@+id/imageView2"
+app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+<TextView
+android:id="@+id/textview3"
+style="@style/long_desc"
+android:layout_width="210dp"
+android:layout_height="120dp"
+android:text="@string/product_long_descripction"
+app:layout_constraintEnd_toEndOf="@+id/textview2"
+app:layout_constraintStart_toStartOf="@+id/textview2"
+app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    </FrameLayout>
+-->

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Tema no usado
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/DarkPurple1</item>
+        <item name="colorPrimaryDark">@color/DarkBlue1</item>
+        <item name="colorAccent">@color/DarkPurple1</item>
+    </style>
+    -->
+    <!--COLORES-->
+    <!--TAMAÑO DE TEXTO-->
+    <!--FUENTE-->
+    <!--MARGENES-->
+
+    <style name="title_letter">
+        <item name="android:textSize">40dp</item>
+        <item name="android:fontFamily">@font/rubik_mono</item>
+    </style>
+
+    <style name="search_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">64dp</item>
+        <item name="android:layout_marginEnd">64dp</item>
+        <item name="android:background">@drawable/style_shape_search</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:hint">@string/search_hint</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <style name="short_desc">
+        <item name="android:fontFamily">@font/space_mono_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="long_desc">
+        <item name="android:fontFamily">@font/ubuntu_mono_bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="bottom_navbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="background">@drawable/color_gradient_blue_1</item>
+        <item name="menu">@menu/menu_inferior</item>
+        <item name="labelVisibilityMode">selected</item>
+    </style>
+
+    <style name="Lateral_menu_letter">
+        <item name="android:font">@font/nova_mono_regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

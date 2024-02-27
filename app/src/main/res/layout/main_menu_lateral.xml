@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:background="@drawable/color_gradient_blue_1"
+        android:gravity="bottom"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="208dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/icon_logo" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:src="@drawable/icon_facebook" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:src="@drawable/icon_twitter" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/icon_link_internet" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/color_gradient_purple_2"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="toShop">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHOP ZONE"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/space_mono_bold"
+            android:textSize="40dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/color_gradient_green_2"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="toChat">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHAT ZONE"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/space_mono_bold"
+            android:textSize="40dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="@drawable/color_gradient_darkblue_2"
+        android:gravity="center_vertical|center_horizontal"
+        android:onClick="toWiki">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WIKI ZONE"
+            android:fontFamily="@font/space_mono_bold"
+            android:textSize="40dp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</LinearLayout>
