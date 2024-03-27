@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!--   color for the app bar and other primary UI elements -->
     <color name="colorPrimary">#3F51B5</color>
 
@@ -10,3 +11,22 @@
     <!--   a secondary color for controls like checkboxes and text fields -->
     <color name="colorAccent">#FF4081</color>
 </resources>
+=======
+    <!--Variedad colores-->
+    <color name="yellow_opac">#FFFAA0</color>
+
+    <!--Colore de fondo de shop_zone-->
+    <color name="LigthPurple1">#754A88</color>
+    <color name="DarkPurple1">#0A002E</color>
+
+    <!--Colore de fondo de chat_zone-->
+    <color name="LigthBlue1">#FFFFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#808080</color>
+
+
+    <color name="DarkBlue1">#FFFFFFFF</color>
+    <color name="DarkGreen">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>
+>>>>>>> f199d43 (practica 5 y 6)
