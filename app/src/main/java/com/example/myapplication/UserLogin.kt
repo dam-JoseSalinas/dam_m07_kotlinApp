@@ -15,7 +15,7 @@ class UserLogin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_login)
 
-        val register_btn: Button = findViewById<Button>(R.id.register_btn)
+        val register_btn: Button = findViewById<Button>(R.id.register_btn_login)
         register_btn.setOnClickListener {
             startActivity(Intent(this, UserRegister::class.java))
         }

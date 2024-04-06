@@ -17,26 +17,25 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
-
+import androidx.test.espresso.intent.Intents
 
 @RunWith(AndroidJUnit4::class)
 class UserLoginTest {
 
     @get:Rule
-    var activityRule: ActivityScenarioRule<UserRegister> =
-        ActivityScenarioRule(UserRegister::class.java)
+    var activityRule: ActivityScenarioRule<UserLogin> =
+        ActivityScenarioRule(UserLogin::class.java)
 
-
+    @Before
+    fun setUp() {
+        // Inicializar Intents
+        Intents.init()
+    }
 
     @Test
-    fun TestCamposRequeridos() {
-        onView(withId(R.id.create_user_btn)).perform(click())
-
-        // Verificar que se muestren los mensajes de error en los EditText
-        onView(withId(R.id.register_fullname)).check(matches(hasErrorText("required")))
-        onView(withId(R.id.register_username)).check(matches(hasErrorText("required")))
-        onView(withId(R.id.register_email)).check(matches(hasErrorText("required")))
-        onView(withId(R.id.register_password)).check(matches(hasErrorText("required")))
+    fun TestUsuarioCreado() {
+        onView(withId(R.id.register_btn_login)).perform(click())
+        intended(hasComponent(UserRegister::class.java.name))
     }
 
 }

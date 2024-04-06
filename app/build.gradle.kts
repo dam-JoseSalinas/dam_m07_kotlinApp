@@ -5,19 +5,13 @@ plugins {
 
 android {
     namespace = "com.example.myapplication"
-<<<<<<< HEAD
-    compileSdk = 33
 
-    defaultConfig {
-        applicationId = "com.example.myapplication"
-        minSdk = 26
-=======
     compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.myapplication"
-        minSdk = 25
->>>>>>> f199d43 (practica 5 y 6)
+        minSdk = 26
+
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
@@ -34,13 +28,12 @@ android {
             )
         }
     }
-<<<<<<< HEAD
-=======
+
 
     buildFeatures {
         viewBinding = true
     }
->>>>>>> f199d43 (practica 5 y 6)
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -48,29 +41,34 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
-<<<<<<< HEAD
 
-=======
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
->>>>>>> f199d43 (practica 5 y 6)
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-<<<<<<< HEAD
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-}
-=======
+
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation("androidx.test.ext:junit-ktx:1.1.5")
+    implementation("androidx.test:runner:1.5.2")
+    implementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation("org.robolectric:robolectric:4.11.1")
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.mockito:mockito-core:3.11.2")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+    testImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
-
+    androidTestImplementation("androidx.test:core-ktx:1.5.0")
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
 }
->>>>>>> f199d43 (practica 5 y 6)

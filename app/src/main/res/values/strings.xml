@@ -1,8 +1,4 @@
 <resources>
-<<<<<<< HEAD
-    <string name="app_name">m7</string>
-</resources>
-=======
     <string name="app_name">Tekbay</string>
     <!--Titulos menu lateral-->
     <string name="menu_shop_title">SHOP ZONE</string>
@@ -95,4 +91,3 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
 </resources>
->>>>>>> f199d43 (practica 5 y 6)

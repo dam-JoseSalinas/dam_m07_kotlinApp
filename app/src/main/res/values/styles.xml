@@ -1,15 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-
-<resources>
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorAccent</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-</resources>
-=======
 <resources 
 	xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Tema no usado
@@ -69,4 +58,3 @@
         <item name="android:textColor">@color/white</item>
     </style>
 </resources>
->>>>>>> f199d43 (practica 5 y 6)
