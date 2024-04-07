@@ -1,15 +1,19 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private lateinit var btnGenerarPdf:Button
+private lateinit var btnGenerarGrafico:Button
 
 /**
  * A simple [Fragment] subclass.
@@ -36,7 +40,23 @@ class AnalizarFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.main_fragment_analizar, container, false)
     }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Asignar referencias a los botones
+        btnGenerarPdf = view.findViewById(R.id.btn_generar_pdf)
+        btnGenerarGrafico = view.findViewById(R.id.btn_generar_grafico)
 
+        // Obtener referencias a los botones usando las id definidas en el layout XML
+        btnGenerarPdf.setOnClickListener {
+            val intent = Intent(requireContext(), FormularioPedirInforme::class.java)
+            startActivity(intent)
+        }
+
+        btnGenerarGrafico.setOnClickListener {
+            val intent = Intent(requireContext(), MostrarGrafico::class.java)
+            startActivity(intent)
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

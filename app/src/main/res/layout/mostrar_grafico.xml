@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MostrarGrafico">
+
+
+    <EditText
+        android:id="@+id/editTextFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre completo"
+        android:inputType="text"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nombre de usuario"
+        android:inputType="text"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="edad"
+        android:inputType="number"
+        android:layout_margin="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerReportType"
+        android:layout_marginTop="16dp"
+        android:entries="@array/informe_entradas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="nombre de usuario"
+        android:inputType="text"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextStartDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="fecha inicio"
+        android:inputType="datetime"
+        android:layout_margin="16dp" />
+
+    <EditText
+        android:id="@+id/editTextEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="fecha final"
+        android:inputType="datetime"
+        android:layout_margin="16dp"/>
+
+
+    <Button
+        android:id="@+id/btnAgregar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="GENERAR GRAFICO"/>
+
+    <com.echo.holographlibrary.BarGraph
+        android:id="@+id/graphBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp" />
+
+</LinearLayout>

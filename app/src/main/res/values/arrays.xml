@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="informe_entradas">
+        <item>Informe de actividad</item>
+        <item>Informe de mas comprados</item>
+        <item>Informe de menos comprados</item>
+    </string-array>
+</resources>

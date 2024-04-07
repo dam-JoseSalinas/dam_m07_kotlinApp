@@ -52,6 +52,8 @@ dependencies {
 
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.25")
 
+    implementation("org.quanqi:android-holo-graph:0.1.0")
+
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
@@ -62,6 +64,7 @@ dependencies {
     implementation("androidx.test.ext:junit-ktx:1.1.5")
     implementation("androidx.test:runner:1.5.2")
     implementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation("androidx.activity:activity:1.8.0")
     testImplementation("org.robolectric:robolectric:4.11.1")
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.mockito:mockito-core:3.11.2")

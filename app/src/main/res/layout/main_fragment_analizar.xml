@@ -5,37 +5,61 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AnalizarFragment">
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <!--DESCRIPCIÓN-->
+        <TextView
+            android:id="@+id/shop_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:text="Este apartado genera gráficos y PDF para analizar las estadísticas de las compras hechas."
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shop_subtitle"
+            style="@style/short_desc"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--SUBTITULO-->
-            <TextView
-                android:id="@+id/shop_subtitle"
-                style="@style/short_desc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="24dp"
-                android:gravity="center"
-                android:text="ESTADISTICAS"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-            <pl.droidsonroids.gif.GifImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/shop_subtitle"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="32dp"
-                android:src="@drawable/graficos"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+        <!--SUBTITULO-->
+        <TextView
+            android:id="@+id/shop_subtitle"
+            style="@style/short_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:text="ESTADISTICAS"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_generar_pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="492dp"
+            android:text="generar PDF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_generar_grafico"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/shop_description"
+            app:layout_constraintTop_toBottomOf="@+id/shop_description"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btn_generar_grafico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generar grafico"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_generar_pdf"
+            app:layout_constraintEnd_toEndOf="@+id/shop_description"
+            app:layout_constraintTop_toTopOf="@+id/btn_generar_pdf" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
