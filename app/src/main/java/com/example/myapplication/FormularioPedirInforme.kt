@@ -73,11 +73,14 @@ class FormularioPedirInforme : AppCompatActivity() {
             title = tipoInforme
             if (tipoInforme.equals("Informe de actividad")) {
 
-                description = "Este es un informe autogenerado que evalua la actividad de inicio de sesion. Aqui se expondran el numero de veces que el usuario accede a la aplicacion por dia o por mes"
+                description = "Este es un informe autogenerado que evalua la actividad de inicio de \n" +
+                        "sesion. Aqui se expondran el numero de veces que el usuario accede a la aplicacion \n" +
+                        " por dia o por mes"
                 dataInfo = "Nombre Completo: " + editTextFullName.text.toString() + "\n" +
                             "Nombre de usuario: " + editTextUsername.text.toString() + "\n" +
                             "Edad: " + editTextAge.text.toString() + "\n" +
-                            "La persona usuaria con los datos establecidos tiene registrados los siguientes inicios de sesion en el intervalo del " + editTextStartDate.text.toString() +
+                            "La persona usuaria con los datos establecidos tiene registrados los \n" +
+                            "siguientes inicios de sesion en el intervalo del " + editTextStartDate.text.toString() + "\n"
                             " al " + editTextEndDate.text.toString() + ":\n" + rand(1, 80).toString()
             } else if(tipoInforme.equals("Informe de mas comprados")) {
                 var arraystrings:ArrayList<String> = ArrayList<String>()
@@ -85,14 +88,17 @@ class FormularioPedirInforme : AppCompatActivity() {
                 arraystrings.add("Raspberry pi")
                 arraystrings.add("Targeta grafica")
                 arraystrings.add("Pantalla LED")
-                description = "Este es un informe autogenerado que compara los productos mas comprados. Aqui se expondran el numero de compras del producto por dia o por mes"
+                description = "Este es un informe autogenerado que compara los productos mas comprados.\n" +
+                        "Aqui se expondran el numero de compras del producto por dia o por mes"
                 dataInfo = "Nombre Completo: " + editTextFullName.text.toString() + "\n" +
                         "Nombre de usuario: " + editTextUsername.text.toString() + "\n" +
                         "Edad: " + editTextAge.text.toString() + "\n" +
                         "Durant el periode del " + editTextStartDate.text.toString() +
-                        " al " + editTextEndDate.text.toString() + " el producte mes comprat ha sigut " + arraystrings.get(rand(0, 3))
+                        " al " + editTextEndDate.text.toString() + " el producte mes comprat ha sigut:\n" +
+                        arraystrings.get(rand(0, 3))
             } else if(tipoInforme.equals("Informe de menos comprados")) {
-                description = "Este es un informe autogenerado que compara los productos menos comprados. Aqui se expondran el numero de compras del producto por dia o por mes"
+                description = "Este es un informe autogenerado que compara los productos menos comprados.\n" +
+                        " Aqui se expondran el numero de compras del producto por dia o por mes"
                 var arraystrings:ArrayList<String> = ArrayList<String>()
                 arraystrings.add("PC gamer")
                 arraystrings.add("Raspberry pi")
@@ -102,7 +108,7 @@ class FormularioPedirInforme : AppCompatActivity() {
                         "Nombre de usuario: " + editTextUsername.text.toString() + "\n" +
                         "Edad: " + editTextAge.text.toString() + "\n" +
                         "Durant el periode del " + editTextStartDate.text.toString() +
-                        " al " + editTextEndDate.text.toString() + " el producte mes comprat ha sigut " + arraystrings.get(rand(0, 3))
+                        " al " + editTextEndDate.text.toString() + " el producte menys comprat ha sigut:\n" + arraystrings.get(rand(0, 3))
             }
             generarPdf()
 
@@ -112,40 +118,39 @@ class FormularioPedirInforme : AppCompatActivity() {
 
     fun generarPdf() {
 
+
         var pdfDocument = PdfDocument()
+        var paginaInfo = PdfDocument.PageInfo.Builder(816, 1054, 1).create()
+        var pagina1 = pdfDocument.startPage(paginaInfo)
+        var canvas = pagina1.canvas
         var paint = Paint()
-        //var bitmap = BitmapFactory.decodeResource(resources, R.drawable.icon_logo)
-        //var bitmapEscala = Bitmap.createScaledBitmap(bitmap, 80,80, false)
+        var bitmap = BitmapFactory.decodeResource(resources, R.drawable.logo_tekbay)
+        var bitmapEscala = Bitmap.createScaledBitmap(bitmap, 80,80, false)
+        canvas.drawBitmap(bitmapEscala, 368f, 20f, paint)
         var titulo = TextPaint()
         titulo.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD))
         titulo.textSize = 20f
+        canvas.drawText(title, 10f, 150f, titulo)
 
         var descripcion = TextPaint()
         descripcion.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL))
         descripcion.textSize = 14f
-
+        var arrDescp = description.split("\n")
+        var y = 200f
+        for (line in arrDescp) {
+            canvas.drawText(line, 10f, y, descripcion)
+            y=y+15f
+        }
         var datosInforme = TextPaint()
         datosInforme.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL))
         datosInforme.textSize = 14f
+        var arrData = dataInfo.split("\n")
+        var y2 = 350f
+        for (line in arrData) {
+            canvas.drawText(line, 10f, y2, datosInforme)
+            y2=y2+15f
+        }
 
-        var paginaInfo = PdfDocument.PageInfo.Builder(816, 1054, 1).create()
-        var pagina1 = pdfDocument.startPage(paginaInfo)
-        var canvas = pagina1.canvas
-
-
-        //canvas.drawBitmap(bitmapEscala, 368f, 20f, paint)
-
-        canvas.drawText(title, 10f, 150f, titulo)
-
-        canvas.drawText(description, 10f, 200f, descripcion)
-        /*var arrDescripcion = descripcionText.split("\n")
-
-        var y = 200f
-        for (item in arrDescripcion) {
-            canvas.drawText(item, 10f, y, descripcion)
-            y += 15
-        }*/
-        canvas.drawText(dataInfo, 10f, 200f, datosInforme)
         pdfDocument.finishPage(pagina1)
 
         val file = File(Environment.getExternalStorageDirectory(), "informe"+rand(1,1000).toString()+".pdf")

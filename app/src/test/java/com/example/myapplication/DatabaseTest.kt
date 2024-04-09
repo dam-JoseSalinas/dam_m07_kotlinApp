@@ -1,3 +1,4 @@
+package com.example.myapplication
 
 import android.content.Context
 import android.database.Cursor
@@ -11,7 +12,7 @@ import org.robolectric.annotation.Config
 
 @RunWith(RobolectricTestRunner::class)
 @Config(manifest = Config.NONE)
-class UserRepositoryTest {
+class DatabaseTest {
 
     private lateinit var context: Context
     private lateinit var db: Database

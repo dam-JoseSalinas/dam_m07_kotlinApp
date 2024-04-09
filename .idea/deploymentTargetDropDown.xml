@@ -2,16 +2,10 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="TestCamposRequeridos()">
+      <entry key="UserLoginTest">
         <State />
       </entry>
-      <entry key="TestUsuarioCreado()">
-        <State />
-      </entry>
-      <entry key="TestUsuarioCreado() (1)">
-        <State />
-      </entry>
-      <entry key="TestUsuarioExistente()">
+      <entry key="UserRegisterTest">
         <State />
       </entry>
       <entry key="app">
