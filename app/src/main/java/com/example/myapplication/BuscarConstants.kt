@@ -26,7 +26,7 @@ class BuscarConstants(mydb: Database) {
             var exit = false
             while (!exit) {
                 val myList = mutableListOf<Any>()
-                for (i in 1..2) {
+                for (j in 1..2) {
                     if (productos_result?.moveToNext() == true) {
                         myList.add(productos_result.getString(2))
                         myList.add(productos_result.getInt(1))
